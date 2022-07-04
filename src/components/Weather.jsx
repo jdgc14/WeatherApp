@@ -69,27 +69,27 @@ const Weather = () => {
                     <h3 className='text-end'>{now}</h3>
                     <div className='d-flex text-start gap-3'>
                         <div className='m-auto'>
-                            <p style={{ fontSize: '4rem', color:'aquamarine' }}>{weatherData.main?.temp}{isCelcius ? '°C' : '°F'}</p>
+                            <p style={{ fontSize: '3rem', color:'aquamarine' }}>{weatherData.main?.temp}{isCelcius ? '°C' : '°F'}</p>
                         </div>
-                        <div style={{ fontSize: '2rem' }} className='m-auto'>
+                        <div style={{ fontSize: '1.2rem' }} className='m-auto'>
                             <p style={{ textTransform: 'capitalize'}}>{weatherData.weather?.[0].description}</p>
                             <p>Feels like: <span>{weatherData.main?.feels_like}°</span></p>
                         </div>
-                        <img style={{ height: '11rem' }} className='m-auto' src={`http://openweathermap.org/img/wn/${weatherData.weather?.[0].icon}@2x.png`} alt="" />
+                        <img style={{ height: '8rem' }} className='m-auto' src={`http://openweathermap.org/img/wn/${weatherData.weather?.[0].icon}@2x.png`} alt="" />
                     </div>
                     <div className='d-flex justify-content-between icon-container'>
-                        <div className='border rounded-5 p-4 col-3'>
+                        <div className='border rounded-5 p-3 col-3'>
                             <i style={{ transform: `rotate(${(weatherData.wind?.deg - 90)}deg)` }} className="fa-solid fa-wind"></i>
                             <p><span>Wind Speed</span></p>
                             <p>{weatherData.wind?.speed} m/s</p>
                         </div>
-                        <div className='border rounded-5 p-4 col-3'>
+                        <div className='border rounded-5 p-3 col-3'>
                             <i className="fa-solid fa-cloud"></i>
                             <p><span>Clouds</span></p>
                             <p>{weatherData.clouds?.all}%</p>
                         </div>
 
-                        <div className='border rounded-5 p-4 col-3'>
+                        <div className='border rounded-5 p-3 col-3'>
                             <i className="fa-solid fa-temperature-full"></i>
                             <p><span>Pressure</span></p>
                             <p>{weatherData.main?.pressure} hPa</p>
